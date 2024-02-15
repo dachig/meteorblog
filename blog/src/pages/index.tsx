@@ -4,17 +4,21 @@ import GetLastPost from "@/functions/getLastPost";
 import { Post } from "@/types";
 import { useEffect, useState } from "react";
 
-const Home = () => {
-  const [lastPost,setLastPost] = useState<Post>(Object);
+export const getStaticProps = async() => {
+  const lastPost : Post = await GetLastPost();
 
-  useEffect(()=>{
-    const fetchLastPost = async()=>{
-      const lastPost: Post = await GetLastPost();
-      setLastPost(lastPost);
-    } 
-    fetchLastPost();
-  },[])
-  console.log(lastPost)
+  return{
+    props:{
+      lastPost
+    }
+  }
+}
+
+interface HomeProps {
+  lastPost : Post
+}
+
+const Home = ({lastPost}:HomeProps) => {
 
   return(
     <>
