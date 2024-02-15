@@ -1,3 +1,4 @@
+import { Post } from "@/types";
 import { GetAllPosts } from "./getAllPosts";
 
 
@@ -6,7 +7,7 @@ export const GetLastPost = async () => {
   const indexLastPost = allPosts.length - 1;
   const lastPostFiltered = allPosts.filter((value:any)=> indexLastPost == value.id && value);
 
-  const lastPost = {
+  const lastPost: Post = {
       id: lastPostFiltered[0].id,
       title: lastPostFiltered[0].title,
       description: lastPostFiltered[0].description,

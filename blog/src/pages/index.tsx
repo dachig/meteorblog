@@ -2,29 +2,26 @@ import BlogPostDialog from "@/components/blogPostDialog";
 import Navigation from "@/components/header";
 import GetLastPost from "@/functions/getLastPost";
 import { Post } from "@/types";
-import { useEffect, useState } from "react";
 
-export const getStaticProps = async() => {
-  const lastPost : Post = await GetLastPost();
-
-  return{
-    props:{
-      lastPost
-    }
-  }
-}
+export const getStaticProps = async () => {
+  const lastPost = await GetLastPost();
+  return {
+    props: {
+      lastPost: lastPost,
+    },
+  };
+};
 
 interface HomeProps {
-  lastPost : Post
+  lastPost: Post;
 }
 
-const Home = ({lastPost}:HomeProps) => {
-
-  return(
+const Home = ({ lastPost }: HomeProps) => {
+  return (
     <>
-    <Navigation/>
-    <BlogPostDialog lastPost={lastPost}/>
+      <Navigation />
+      <BlogPostDialog lastPost={lastPost} />
     </>
-  )
-}
+  );
+};
 export default Home;

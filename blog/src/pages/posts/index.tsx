@@ -2,17 +2,14 @@ import Navigation from "@/components/header";
 import RenderAllPosts from "@/components/renderAllPosts";
 import { GetAllPosts } from "@/functions/getAllPosts";
 import { Post } from "@/types";
-import { get } from "http";
-import { useEffect, useState } from "react";
 
 export const getStaticProps = async () => {
-  const allPosts : Post[] = await GetAllPosts();
-  
+  const allPosts = await GetAllPosts();
   return {
-    props:{
-      allPosts
-    }
-  }
+    props: {
+      allPosts: allPosts,
+    },
+  };
 };
 
 interface BlogProps {
