@@ -13,15 +13,16 @@ export const getStaticProps = async () => {
 };
 
 interface BlogProps {
-  allPosts: Post[]
+  allPosts: Post[];
 }
 
 const Posts = ({ allPosts }: BlogProps) => {
-
   return (
     <>
-      <Navigation />
-      <RenderAllPosts allPosts={allPosts} />
+      <div className="bg-slate-100">
+        <Navigation />
+        <RenderAllPosts allPosts={allPosts} />
+      </div>
     </>
   );
 };
