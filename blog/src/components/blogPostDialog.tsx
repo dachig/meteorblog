@@ -51,17 +51,16 @@ const BlogPostDialog = ({ lastPost }: LastPostProps) => {
                 <CarouselItem key={index}>
                   <div>
                     <Card>
-                      <CardContent className="h-[425px] ">
-                        <div className="max-w-[550px] flex flex-col mx-auto">
+                      <CardContent className="pt-6">
+                        <div className="relative w-auto h-[300px] md:h-[450px] lg:h-[550px] flex flex-col mx-auto">
                           <Image
-                            className="mx-auto pt-6"
+                            className="object-cover"
                             alt={image.url}
                             src={image.url}
                             key={image.url}
-                            width={550}
-                            height={375}
+                            fill
                           />
-                          <span className="text-center text-muted-foreground ml-auto">
+                          <span className="text-center text-muted-foreground mt-auto z-30 bg-blue-50 py-3 px-8 border-[2px] border-blue-500 mx-auto mb-6 rounded-md">
                             {image.caption}
                           </span>
                         </div>

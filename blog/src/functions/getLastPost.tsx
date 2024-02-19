@@ -4,7 +4,7 @@ import { GetAllPosts } from "./getAllPosts";
 
 export const GetLastPost = async () => {
   const allPosts = await GetAllPosts();
-  const indexLastPost = allPosts.length - 1;
+  const indexLastPost = allPosts.length;
   const lastPostFiltered = allPosts.filter((value:any)=> indexLastPost == value.id && value);
 
   const lastPost: Post = {
