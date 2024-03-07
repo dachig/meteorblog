@@ -1,8 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
 
+@keyframes leftToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes rightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.rightToLeft {
+  animation:1.5s rightToLeft;
+}
+.leftToRight {
+  animation: 1.5s leftToRight;
+}
 
 @layer base {
   :root {
@@ -51,9 +77,6 @@
   }
 }
 
-
-
- 
 @layer base {
   * {
     @apply border-border;

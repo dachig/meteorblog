@@ -1,7 +1,10 @@
-import BlogPostDialog from "@/components/blogPostDialog";
-import Navigation from "@/components/header";
+import { useState } from "react";
+import { Dialog } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import GetLastPost from "@/functions/getLastPost";
 import { Post } from "@/types";
+import Navigation from "@/components/header";
+import Link from "next/link";
 
 export const getStaticProps = async () => {
   const lastPost = await GetLastPost();
@@ -16,50 +19,76 @@ interface HomeProps {
   lastPost: Post;
 }
 
-const Home = ({ lastPost }: HomeProps) => {
+export default function Home({ lastPost }: HomeProps) {
   return (
-    <>
-      <div className="bg-slate-100">
-        <Navigation />
-        <div>
-          <div>
-            <h2>Welcome to my blog!</h2>
-            <p>
-              This blogpage will be my personal documentation of my internsip at
-              Meteor Digital NV.
-            </p>
-            <p>
-              Meteor Digital NV is een vooraanstaand technologiebedrijf dat zich
-              specialiseert in het bieden van uitgebreide e-commerce oplossingen
-              en digitale diensten. Door middel van innovatieve
-              softwareontwikkeling en geavanceerde webapplicaties helpt Meteor
-              Digital NV bedrijven uit diverse sectoren om hun online
-              aanwezigheid te versterken en succesvolle digitale
-              handelsplatformen te creëren.
-            </p>
-            <p>
-              Met een diepgaande expertise en een toegewijd team van ervaren
-              professionals, biedt Meteor Digital NV niet alleen op maat
-              gemaakte oplossingen, maar ook consultancydiensten en strategisch
-              advies aan hun klanten. Of het nu gaat om het ontwikkelen van een
-              nieuwe e-commerce website, het optimaliseren van bestaande
-              digitale processen, of het integreren van geavanceerde functies,
-              Meteor Digital NV staat garant voor betrouwbare en klantgerichte
-              service.
-            </p>
-            <p>
-              Daarnaast onderscheidt Meteor Digital NV zich door zijn toewijding
-              aan doorlopende ondersteuning en onderhoud, waardoor klanten
-              verzekerd zijn van een soepele werking en blijvend succes van hun
-              digitale platformen. Dankzij hun proactieve aanpak, blijft Meteor
-              Digital NV een betrouwbare partner voor bedrijven die streven naar
-              groei en innovatie in de steeds veranderende digitale wereld.
-            </p>
+    <div className="bg-white">
+      <Navigation />
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div
+          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 animate-pulse"
+          aria-hidden="true"
+        >
+          <div
+            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#85b6cf] to-[#5146f5] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style={{
+              clipPath:
+                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+            }}
+          />
+        </div>
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="mb-8 flex justify-center">
+            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+              Check out my latest blog post.{" "}
+              <Link
+                target="_blank"
+                href={`/posts/${lastPost.id}`}
+                className="font-semibold text-indigo-600"
+              >
+                <span className="absolute inset-0" aria-hidden="true" />
+                Read more <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </div>
           </div>
-          <BlogPostDialog lastPost={lastPost} />
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Meteor Digital NV Blog
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Welcome to my internship journey with Meteor Digital NV. Take a
+              look behind the scenes of an intern working at an e-commerce
+              development company.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Link
+                href="/posts"
+                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              >
+                Start reading
+              </Link>
+              <Link
+                target="_blank"
+                href="https://meteor.be/"
+                className="text-sm font-semibold leading-6 text-gray-900"
+              >
+                Meteor Digital NV <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div
+          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)] animate-pulse"
+          aria-hidden="true"
+        >
+          <div
+            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#85b6cf] to-[#5146f5] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            style={{
+              clipPath:
+                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+            }}
+          />
         </div>
       </div>
-    </>
+    </div>
   );
-};
-export default Home;
+}

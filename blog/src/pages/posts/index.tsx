@@ -1,5 +1,6 @@
+import Footer from "@/components/footer";
 import Navigation from "@/components/header";
-import RenderAllPosts from "@/components/renderAllPosts";
+import AllPosts from "@/components/postCardGrid";
 import { GetAllPosts } from "@/functions/getAllPosts";
 import { Post } from "@/types";
 
@@ -19,9 +20,10 @@ interface BlogProps {
 const Posts = ({ allPosts }: BlogProps) => {
   return (
     <>
-      <div className="bg-slate-100">
+      <div className="">
         <Navigation />
-        <RenderAllPosts allPosts={allPosts} />
+        <AllPosts allPosts={allPosts} />
+        <Footer/>
       </div>
     </>
   );
