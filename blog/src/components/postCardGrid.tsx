@@ -4,6 +4,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useState } from "react";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
+import { Meteors } from "./meteors";
 
 interface AllPostsProps {
   allPosts: Post[];
@@ -36,11 +37,11 @@ const AllPosts = ({ allPosts }: AllPostsProps) => {
   return (
     <main className="flex flex-wrap gap-10 justify-center pt-24 sm:mx-6 md:mx-14 lg:mx-20 2xl:mx-64 mb-10">
       <Menu as="div" className="w-full text-center">
-        <div>
-          <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
+        <div className="-mb-6">
+          <Menu.Button className="group inline-flex justify-center text-lg md:text-sm font-medium text-gray-700 hover:text-gray-900">
             Sort
             <ChevronDownIcon
-              className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+              className="-mr-1 ml-1 mt-[4px] md:mt-0 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
               aria-hidden="true"
             />
           </Menu.Button>

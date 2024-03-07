@@ -12,22 +12,16 @@
     transform: translateX(0);
   }
 }
-@keyframes rightToLeft {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
-.rightToLeft {
-  animation:1.5s rightToLeft;
+
+.leftToRight1 {
+  animation:1.5s leftToRight;
 }
-.leftToRight {
-  animation: 1.5s leftToRight;
+.leftToRight2 {
+  animation: 3s leftToRight;
+}
+.leftToRight3 {
+  animation:4.5s leftToRight;
 }
 
 @layer base {

@@ -10,10 +10,10 @@ const About = () => {
     <>
       <div>
         <Navigation />
-        <main className="pt-24">
+        <main className="max-w-7xl mx-auto pt-24">
           <Container className="p-10 rounded-lg">
-            <div className="flex flex-col justify-center md:flex-row md:gap-20 mb-10 rightToLeft">
-              <div className="flex flex-col items-center">
+            <div className="flex flex-col justify-center md:flex-row md:gap-20 mb-10 leftToRight1">
+              <div className="z-50 flex flex-col items-center">
                 <Typography
                   className="p-2 text-indigo-600 rounded-lg hidden md:flex"
                   variant="h4"
@@ -34,7 +34,7 @@ const About = () => {
                   landscape, one line of code at a time.
                 </Typography>
               </div>
-              <div className="w-[300px] h-[300px] mx-auto md:mx-0 mb-10">
+              <div className="z-50 w-[300px] h-[300px] mx-auto md:mx-0 mb-10">
                 <Image
                   src="https://res.cloudinary.com/dzass4sf0/image/upload/t_NEWPFP/ndsfvfqbzc8agdu7hh1r.jpg"
                   alt="about-me-collage"
@@ -44,7 +44,7 @@ const About = () => {
                 />
                 <div className="absolute rounded-full translate-x-8 translate-y-3 w-[300px] h-[300px] bg-stone-500" />
               </div>
-              <div className="flex flex-col items-center">
+              <div className="z-50 flex flex-col items-center">
                 <Typography
                   className="p-2 text-indigo-600 rounded-lg flex md:hidden"
                   variant="h4"
@@ -67,8 +67,8 @@ const About = () => {
               </div>
             </div>
 
-            <div className="flex flex-col justify-center md:flex-row md:gap-20 mb-10 leftToRight">
-              <div className="w-[300px] h-[300px] mx-auto md:mx-0 mb-10">
+            <div className="flex flex-col justify-center md:flex-row md:gap-20 mb-10 leftToRight2">
+              <div className="z-50 w-[300px] h-[300px] mx-auto md:mx-0 mb-10">
                 <Image
                   src="https://res.cloudinary.com/dzass4sf0/image/upload/v1709754441/g6u1khvkgoolj6qfaamd.jpg"
                   alt="about-me-collage"
@@ -79,7 +79,7 @@ const About = () => {
                 <div className="absolute rounded-full translate-x-8 translate-y-3 w-[300px] h-[300px] bg-indigo-600" />
               </div>
 
-              <div className="flex flex-col items-center">
+              <div className="z-50 flex flex-col items-center">
                 <Typography
                   className="p-2 text-indigo-600 rounded-lg flex"
                   variant="h4"
@@ -104,8 +104,8 @@ const About = () => {
                 </Typography>
               </div>
             </div>
-            <div className="flex flex-col justify-center md:flex-row md:gap-20 mb-10 rightToLeft">
-              <div className="flex flex-col items-center">
+            <div className="flex flex-col justify-center md:flex-row md:gap-20 mb-10 leftToRight3">
+              <div className="z-50 flex flex-col items-center">
                 <Typography
                   className="p-2 text-indigo-600 rounded-lg hidden md:flex"
                   variant="h4"
@@ -160,7 +160,7 @@ const About = () => {
             </div>
           </Container>
         </main>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );

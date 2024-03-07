@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <footer className="max-w-7xl border-t p-6 mx-auto ">
       <div className="flex flex-col gap-2">
-        <Typography variant="h6" align="center">
+        <Typography align="center">
           2023-2024 Dachi Giorgobiani AP Hogeschool
         </Typography>
-        <div className="flex gap-10 justify-center items-center">
+        <div className="flex gap-2 md:gap-10 justify-center items-center">
           <a href="./CVdocument.pdf" download>
             {" "}
-            <Button className="px-8" variant="default" color="primary">
+            <Button className="md:px-8" variant="default" color="primary">
               Download CV
             </Button>
           </a>

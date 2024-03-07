@@ -11,6 +11,7 @@ import {
   TransformWrapper,
   TransformComponent,
 } from "react-zoom-pan-pinch";
+import { Meteors } from "./meteors";
 
 interface SpecificPostProps {
   specificPost: Post;
@@ -18,9 +19,9 @@ interface SpecificPostProps {
 
 const SpecificPost = ({ specificPost }: SpecificPostProps) => {
   return (
-    <div className="flex flex-col mx-auto p-2 pt-24 lg:px-40 xl:px-72 2xl:px-96">
+    <div className="flex flex-col items-center p-2 pt-24 lg:px-40 xl:px-72 2xl:px-96">
       {specificPost.media?.length! > 0 && (
-        <div className="rounded-3xl bg-gradient-radial from-indigo-500 via-indigo-200 to-transparent">
+        <div className="w-full relative max-w-5xl mx-auto border-[1px] border-gray-300 rounded-2xl">
           <Carousel
             className="w-full h-[300px] sm:h-[400px] md:h-[500px] p-10 rounded-lg"
             navButtonsAlwaysVisible={
@@ -46,9 +47,10 @@ const SpecificPost = ({ specificPost }: SpecificPostProps) => {
               />
             ))}
           </Carousel>
+          {/* Meaty part - Meteor effect */}
         </div>
       )}
-      <div className="mx-auto mt-5">
+      <div className="mx-auto my-5">
         <Card className="flex flex-col rounded-3xl border-t-[1px] border-r-[1px] border-l-[1px] border-gray-300">
           <CardHeader
             avatar={
