@@ -7,10 +7,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { Avatar, Typography } from "@mui/material";
 import Link from "next/link";
-import {
-  TransformWrapper,
-  TransformComponent,
-} from "react-zoom-pan-pinch";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { Meteors } from "./meteors";
 
 interface SpecificPostProps {
@@ -38,13 +35,17 @@ const SpecificPost = ({ specificPost }: SpecificPostProps) => {
             autoPlay={false}
           >
             {specificPost.media?.map((image: any, index) => (
-              <Image
-                className="object-contain"
-                key={index}
-                src={image.url}
-                alt="images"
-                fill={true}
-              />
+              <div key={index}>
+                <Image
+                  src={image.url}
+                  alt="images"
+                  fill={true}
+                  className="object-contain"
+                />
+                <p className=" absolute bottom-5 left-0 right-0  text-center -mb-5 text-xs text-white bg-indigo-600 p-2 rounded-lg">
+                  {image.caption}
+                </p>
+              </div>
             ))}
           </Carousel>
           {/* Meaty part - Meteor effect */}
