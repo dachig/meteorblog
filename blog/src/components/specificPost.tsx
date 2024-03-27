@@ -1,7 +1,6 @@
 import { Post } from "@/types";
 import Image from "next/image";
 import Carousel from "react-material-ui-carousel";
-import { CardHeader, Grid } from "@material-ui/core";
 import { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -53,23 +52,24 @@ const SpecificPost = ({ specificPost }: SpecificPostProps) => {
       )}
       <div className="mx-auto my-5">
         <Card className="flex flex-col rounded-3xl border-t-[1px] border-r-[1px] border-l-[1px] border-gray-300">
-          <CardHeader
-            avatar={
-              <Link href="/about">
-                <Avatar className="border-2 border-primary" aria-label="recipe">
-                  <Image
-                    src="https://res.cloudinary.com/dzass4sf0/image/upload/v1707067666/thumbnail_avatar_Meteor_830ed94696.jpg"
-                    alt="avatar"
-                    fill={true}
-                    className="object-cover"
-                  />
-                </Avatar>
-              </Link>
-            }
-            title={specificPost.title}
-            titleTypographyProps={{ style: { fontSize: "20px" } }}
-            subheader={specificPost.publishedAt.substring(0, 10)}
-          />
+          <div className="p-5 flex items-center gap-3">
+            <Link href="/about">
+              <Avatar className="border-2 border-primary" aria-label="recipe">
+                <Image
+                  src="https://res.cloudinary.com/dzass4sf0/image/upload/v1707067666/thumbnail_avatar_Meteor_830ed94696.jpg"
+                  alt="avatar"
+                  fill={true}
+                  className="object-cover"
+                />
+              </Avatar>
+            </Link>
+            <div className="flex flex-col">
+              <h2 className="text-xl font-semibold text-gray-700">
+                {specificPost.title}
+              </h2>
+              <p className="text-gray-500 text-xs">{specificPost.publishedAt.substring(0, 10)}</p>
+            </div>
+          </div>
 
           <CardContent className="max-w-xl">
             <Typography variant="body1" color="darkslategray">

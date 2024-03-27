@@ -55,7 +55,7 @@ const AllPosts = ({ allPosts }: AllPostsProps) => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="mx-auto right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="mx-auto mt-7 right-0 z-10 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="p-2 flex flex-col">
               {allOptions.map((option: any) => (
                 <Menu.Item key={option.name}>
