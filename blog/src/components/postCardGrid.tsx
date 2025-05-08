@@ -25,21 +25,21 @@ const AllPosts = ({ allPosts }: AllPostsProps) => {
 
   function filterPosts(option: string) {
     if (option == "clear") {
-        setFilteredAllPosts(allPosts.map((post) => post));
+      setFilteredAllPosts(allPosts.map((post) => post));
+      setSelectedOption("");
     } else {
-        setFilteredAllPosts(
-          allPosts.filter((post) => (post.category === option ? post : false))
-        );
-
+      setFilteredAllPosts(
+        allPosts.filter((post) => (post.category === option ? post : false))
+      );
+      setSelectedOption(option);
     }
   }
-
   return (
-    <main className="flex flex-wrap gap-10 justify-center pt-24 sm:mx-6 md:mx-14 lg:mx-20 2xl:mx-64 mb-10">
+    <main className="flex flex-wrap gap-10 justify-center pt-24 sm:mx-6 md:mx-14 mb-10">
       <Menu as="div" className="w-full text-center">
         <div className="-mb-6">
           <Menu.Button className="group inline-flex justify-center text-lg md:text-sm font-medium text-gray-700 hover:text-gray-900">
-            Sort
+            {selectedOption == "" ? "Sort" : selectedOption}
             <ChevronDownIcon
               className="-mr-1 ml-1 mt-[4px] md:mt-0 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
               aria-hidden="true"
@@ -73,7 +73,7 @@ const AllPosts = ({ allPosts }: AllPostsProps) => {
           </Menu.Items>
         </Transition>
       </Menu>
-      {filteredAllPosts.toReversed().map((post: any, index: number) => (
+      {filteredAllPosts.reverse().map((post: any, index: number) => (
         <div className="p-2 -mb-10 sm:mb-0" key={index}>
           <BlogPostDialog lastPost={post} />
         </div>

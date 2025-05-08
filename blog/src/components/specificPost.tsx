@@ -14,6 +14,7 @@ interface SpecificPostProps {
 }
 
 const SpecificPost = ({ specificPost }: SpecificPostProps) => {
+  console.log(specificPost);
   return (
     <div className="flex flex-col items-center p-2 pt-24 lg:px-40 xl:px-72 2xl:px-96">
       {specificPost.media?.length! > 0 && (
@@ -41,7 +42,7 @@ const SpecificPost = ({ specificPost }: SpecificPostProps) => {
                   fill={true}
                   className="object-contain"
                 />
-                <p className=" absolute bottom-5 left-0 right-0  text-center -mb-5 text-xs text-white bg-indigo-600 p-2 rounded-lg">
+                <p className=" absolute bottom-5 left-0 right-0  text-center -mb-5 text-xs text-white bg-blue-600 p-2 rounded-lg">
                   {image.caption}
                 </p>
               </div>
@@ -67,7 +68,9 @@ const SpecificPost = ({ specificPost }: SpecificPostProps) => {
               <h2 className="text-xl font-semibold text-gray-700">
                 {specificPost.title}
               </h2>
-              <p className="text-gray-500 text-xs">{specificPost.publishedAt.substring(0, 10)}</p>
+              <p className="text-gray-500 text-xs">
+                {specificPost.publishedAt.substring(0, 10)}
+              </p>
             </div>
           </div>
 

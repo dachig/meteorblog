@@ -13,7 +13,7 @@ const About = () => {
           <div className="p-10 rounded-lg">
             <div className="flex flex-col justify-center md:flex-row md:gap-20 mb-10 leftToRight1">
               <div className="z-50 flex flex-col items-center">
-                <h2 className="p-2 text-md text-left text-indigo-600 rounded-lg hidden md:flex">
+                <h2 className="p-2 text-md text-left text-blue-600 rounded-lg hidden md:flex">
                   About me
                 </h2>
                 <p
@@ -38,7 +38,7 @@ const About = () => {
                 <div className="absolute rounded-full translate-x-8 translate-y-3 w-[300px] h-[300px] bg-stone-500" />
               </div>
               <div className="z-50 flex flex-col items-center">
-                <h2 className="p-2 text-indigo-600 rounded-lg flex md:hidden">
+                <h2 className="p-2 text-blue-600 rounded-lg flex md:hidden">
                   About me
                 </h2>
                 <p
@@ -57,34 +57,39 @@ const About = () => {
             <div className="flex flex-col justify-center md:flex-row md:gap-20 mb-10 leftToRight2">
               <div className="z-50 w-[300px] h-[300px] mx-auto md:mx-0 mb-10">
                 <Image
-                  src="https://res.cloudinary.com/dzass4sf0/image/upload/v1709754441/g6u1khvkgoolj6qfaamd.jpg"
+                  src="https://res.cloudinary.com/dzass4sf0/image/upload/v1739303364/thumbnail_twintag_Logo_40ed17c950.png"
                   alt="about-me-collage"
                   height={300}
                   width={300}
                   className="absolute z-10 rounded-full shadow-xl shadow-black"
                 />
-                <div className="absolute rounded-full translate-x-8 translate-y-3 w-[300px] h-[300px] bg-indigo-600" />
+                <div className="absolute rounded-full translate-x-8 translate-y-3 w-[300px] h-[300px] bg-blue-600" />
               </div>
 
               <div className="z-50 flex flex-col items-center">
-                <h2 className="p-2 text-indigo-600 rounded-lg flex">
-                  My role at Meteor
+                <h2 className="p-2 text-blue-600 rounded-lg flex">
+                  My role at Twintag
                 </h2>
                 <p color="textSecondary" className="max-w-[600px] flex">
-                  At Meteor Digital NV, I'm currently spearheading the
-                  development of a Progressive Web App (PWA) for our ecommerce
-                  websites. By harnessing the latest advancements in web
-                  technology, we're poised to revolutionize our company's
-                  workflow, streamline processes, and deliver unparalleled value
-                  to our clients. Additionally, I'm gearing up to lend my
-                  expertise to upcoming client projects, where I'll continue to
-                  push the envelope of innovation.
+                  As a Frontend Web Developer at Twintag, I focus on delivering
+                  exceptional user experiences by creating dynamic, intuitive,
+                  and responsive web interfaces for client projects. I
+                  collaborate closely with design and backend teams to implement
+                  tailored solutions that meet client needs, leveraging modern
+                  frameworks and technologies to ensure seamless functionality.
+                  Beyond client work, I actively contribute to internal
+                  innovation by developing AI-powered assistant tools that
+                  enhance productivity and streamline workflows. My role
+                  requires balancing creativity, technical expertise, and
+                  problem-solving to drive impactful digital solutions while
+                  staying ahead of industry trends to deliver cutting-edge user
+                  experiences for clients and internal initiatives.
                 </p>
               </div>
             </div>
             <div className="flex flex-col justify-center md:flex-row md:gap-20 mb-10 leftToRight3">
               <div className="z-50 flex flex-col items-center">
-                <h2 className="p-2 text-indigo-600 rounded-lg hidden md:flex">
+                <h2 className="p-2 text-blue-600 rounded-lg hidden md:flex">
                   Hobbies
                 </h2>
                 <p
@@ -109,7 +114,7 @@ const About = () => {
                 <div className="absolute rounded-full translate-x-8 translate-y-3 w-[300px] h-[300px] bg-stone-500" />
               </div>
               <div className="flex flex-col items-center">
-                <h2 className="p-2 text-indigo-600 rounded-lg flex md:hidden">
+                <h2 className="p-2 text-blue-600 rounded-lg flex md:hidden">
                   Hobbies
                 </h2>
                 <p

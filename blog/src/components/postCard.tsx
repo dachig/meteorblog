@@ -11,15 +11,14 @@ const BlogPostDialog = ({ lastPost }: LastPostProps) => {
   return (
     <div className="md:hover:scale-105 duration-200 transition-all">
       <div className=" w-full relative max-w-xl">
-        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-indigo-50 to-indigo-900 transform scale-[0.80] bg-indigo-500 rounded-full blur-3xl" />
+        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-50 to-blue-900 transform scale-[0.80] bg-blue-500 rounded-full blur-3xl" />
         <div className="relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
-         
           <div className="z-50">
             <div className="flex items-center gap-x-4 text-xs">
               <p className="text-gray-400">
                 {lastPost.publishedAt.substring(0, 10)}
               </p>
-              <p className="relative z-10 rounded-full bg-indigo-600 px-5 py-1 font-medium text-white">
+              <p className="relative z-10 rounded-full bg-blue-600 px-5 py-1 font-medium text-white">
                 {lastPost.category}
               </p>
             </div>

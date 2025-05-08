@@ -46,7 +46,7 @@ export const Navigation = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="text-md font-semibold leading-6 text-gray-900 hover:text-indigo-600"
+              className="text-md font-semibold leading-6 text-gray-900 hover:text-blue-600"
             >
               {item.name}
             </Link>
@@ -90,7 +90,7 @@ export const Navigation = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:text-indigo-600"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:text-blue-600"
                   >
                     {item.name}
                   </Link>
